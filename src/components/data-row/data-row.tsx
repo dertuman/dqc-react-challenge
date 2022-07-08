@@ -69,22 +69,31 @@ function DataRow({ data, type, count, missing }: DataRowProps) {
                         )}
                     </div>
                     <div className="basis-7/12 p-5">
-                        <div>Graph</div>
-                        <p>
-                            Valid <div className="square green"></div>:{' '}
-                            {data.length - missing.length}
-                        </p>
+                        <div className="flex w-full h-3">
+                            <div
+                                className="bg-green-400"
+                                style={{ width: `${((count - missing.length) / count) * 100}%` }}
+                            ></div>
+                            <div className="bg-orange-400" style={{ width: '0%' }}></div>
+                            <div
+                                className="bg-red-400"
+                                style={{ width: `${(missing.length / count) * 100}%` }}
+                            ></div>
+                        </div>
+                        <div>
+                            Valid <div className="square green"></div>: {count - missing.length}
+                        </div>
                         {/* Wasn't so sure about this one */}
-                        <p>
+                        <div>
                             Mismatched <div className="square orange"></div>: 0
-                        </p>
-                        <p>
+                        </div>
+                        <div>
                             Missing <div className="square red"></div>: {missing.length}
-                        </p>
-                        <p>Unique: {data.length}</p>
-                        <p>
+                        </div>
+                        <div>Unique: {data.length}</div>
+                        <div>
                             Most Common {type}: {ready && data[data.length - 1][0]}
-                        </p>
+                        </div>
                     </div>
                 </>
             )}

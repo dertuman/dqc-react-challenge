@@ -11,6 +11,9 @@ function Table() {
     const [missingBrands, setMissingBrands]: [[], Function] = useState([]);
     const [missingModels, setMissingModels]: [[], Function] = useState([]);
     const [missingClasses, setMissingClasses]: [[], Function] = useState([]);
+    const [validBrands, setValidBrands]: [[], Function] = useState([]);
+    const [validModels, setValidModels]: [[], Function] = useState([]);
+    const [validClasses, setValidClasses]: [[], Function] = useState([]);
 
     function sortItems(items: {}) {
         let arr = Object.entries(items).sort((a: any, b: any) => a[1] - b[1]);
@@ -27,7 +30,10 @@ function Table() {
             classes: any = {},
             missingBrands: {}[] = [],
             missingModels: {}[] = [],
-            missingClasses: {}[] = [];
+            missingClasses: {}[] = [],
+            validBrands: {}[] = [],
+            validModels: {}[] = [],
+            validClasses: {}[] = [];
 
         for (var i = 0; i < data.length; i++) {
             if (!data[i]['Model']) missingBrands.push(data[i]);

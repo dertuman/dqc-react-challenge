@@ -1,6 +1,7 @@
 # About the project
 
 The project may involve certain "overengineering" to showcase some of the techonologies I'm comfortable working with.
+The typing is not super strong on this one.
 
 # About Vercel
 
