@@ -1,0 +1,21 @@
+.square {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    // &::before {
+    //     content: '';
+    //     display: inline-block;
+    //     width: 10px;
+    //     height: 10px;
+    //     background-color: red;
+    &.green {
+        background-color: green;
+    }
+    &.orange {
+        background-color: orange;
+    }
+    &.red {
+        background-color: red;
+    }
+    // }
+}
