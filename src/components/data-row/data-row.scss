@@ -1,0 +1,14 @@
+.square {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    &.green {
+        background-color: rgb(12, 196, 169);
+    }
+    &.orange {
+        background-color: rgb(241, 181, 29);
+    }
+    &.red {
+        background-color: rgb(212, 68, 68);
+    }
+}
